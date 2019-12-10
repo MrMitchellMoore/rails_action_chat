@@ -35,6 +35,5 @@
 yarn-debug.log*
 .yarn-integrity
 
-# Ignore yml files
-
-/rubocop/*
+# Ignore rubo-cop yml files
+/rubocop/*.yml
