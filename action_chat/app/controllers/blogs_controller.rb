@@ -25,10 +25,10 @@ class BlogsController < ApplicationController
   def update
   	if @blog.update(blog_params)
   		flash[:success] = "Post updated."
-  		redirect_to @blogs	
+  		redirect_to @blog	
   	else
   		flash.now[:error] = "Post not updated something went wrong."
-  		redirect_to @blogs 
+  		render :edit 
   	end	
   end
 
@@ -38,6 +38,7 @@ class BlogsController < ApplicationController
   def destroy
   	@blog.destroy
   	flash[:success] = "Post is deleted"
+  	redirect_to 
   end
 
   private
