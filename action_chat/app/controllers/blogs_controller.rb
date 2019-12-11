@@ -15,7 +15,7 @@ class BlogsController < ApplicationController
   	@blog = Blog.create(blog_params)
   	if @blog.save
   		flash[:success] = "Post is created."
-  		redirect_to @blog
+  		redirect_to blogs_path
   	else
   		flash.now[:error] = "Post was not created something went wrong."
   		render :new

@@ -4,12 +4,14 @@ module ApplicationHelper
 	# custom flash messages
 	def alert_class(flash_type)
 	    case flash_type.to_sym
-	    	when :notice
+	    	when :success
 	      	"alert-success"
 	    	when :alert
 	      	"alert-warning"
 	    	when :error
 	      	"alert-danger"
+	      	when :notice
+	      	"alert alert-info"	
 	    end
 	end
 end
